@@ -154,9 +154,23 @@ public class EditUser extends javax.swing.JFrame {
 
         String user = txtUser.getText();
         String password = txtPassword.getText();
-        int rol = jcbUser.getSelectedIndex();
+        int idRol = jcbUser.getSelectedIndex();
+        String NombreRol="";
+        
+     
+        
+        if(jcbUser.getItemAt(jcbUser.getSelectedIndex()).equalsIgnoreCase("admin")){
+            idRol = 1;
+        }
+        if(jcbUser.getItemAt(jcbUser.getSelectedIndex()).equalsIgnoreCase("user")){
+            idRol=2;
+        }
+        
+        
+        
+         System.out.println("rol:" + idRol );
 
-        control.editarUser(us, user, password, rol);
+        control.editarUser(us, user, password, idRol );
 
         JOptionPane.showMessageDialog(null, "Usuario editado con éxito. Por favor recargue la tabla");
    
