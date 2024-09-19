@@ -61,9 +61,9 @@ public class Controladora {
        return controlPersis.traerUser(id);
     }
 
-    public void editarUser(User us, String user, String password, int rol) {
+    public void editarUser(User us, String user, String password, int idRol) {
      
-        Rol r = controlPersis.traerRol(rol);
+        Rol r = controlPersis.traerRol(idRol);
       
         
         
